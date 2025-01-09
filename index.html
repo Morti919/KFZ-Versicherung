@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kfz-Versicherungsberatung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            padding: 10px;
+            background: #005bb5;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .services {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .service-box {
+            width: 48%;
+            padding: 20px;
+            background: #eef;
+            text-align: center;
+        }
+        .contact-form {
+            margin-top: 30px;
+            padding: 20px;
+            background: #ddd;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        button {
+            background: #0073e6;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #005bb5;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kfz-Versicherungsberatung</h1>
+    <p>Unabhängige Beratung für Privat- und Firmenkunden auf Honorarbasis</p> </header>
+
+<nav>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<div class="container">
+    <h2 id="leistungen">Unsere Leistungen</h2>
+    <div class="services">
+        <div class="service-box">
+            <h3>Für Privatkunden</h3>
+            <p>Wir helfen Ihnen, die beste Kfz-Versicherung zu finden – transparent und unabhängig.</p>
+        </div>
+        <div class="service-box">
+            <h3>Für Firmenkunden</h3>
+            <p>Optimierung von Flottenversicherungen und individuelle Lösungen für Unternehmen.</p>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h2 id="kontakt">Kontakt</h2>
+        <p>Hinterlassen Sie uns eine Nachricht – wir melden uns schnellstmöglich!</p>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Ihr Name" required>
+            <input type="email" id="email" placeholder="Ihre E-Mail" required>
+            <textarea id="message" placeholder="Ihre Nachricht" required></textarea>
+            <button type="submit">Absenden</button>
+        </form>
+        <p id="responseMessage" style="color:green; display:none;">Nachricht gesendet! Wir melden uns bald.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Kfz-Versicherungsberatung – Unabhängig & Transparent</p> </footer>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        document.getElementById("responseMessage").style.display = "block";
+        document.getElementById("contactForm").reset();
+    });
+</script>
+
+</body>
+</html>
